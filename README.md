@@ -58,3 +58,32 @@ $ npm i --save-dev @types/uuid
 If there is not types for the module then you will need to create your own (outside scope of this project). But see the [Typescript documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-d-ts.html)
 
 
+# Monorepo setup
+
+This is done using yarn and lerna - based on [this blog post](https://blog.ah.technology/a-guide-through-the-wild-wild-west-of-setting-up-a-mono-repo-with-typescript-lerna-and-yarn-ed6a1e5467a)
+
+First install lerna and init it as a devDependencies
+```sh
+$ npx lerna init
+```
+
+This results in an error:
+```sh
+lerna ERR! Cannot initialize lerna because your package manager has not been configured to use `workspaces`, and you have not explicitly specified any packages to operate on
+lerna ERR! See https://lerna.js.org/docs/getting-started#adding-lerna-to-an-existing-repo for how to resolve this
+```
+
+This is becasue we are adding lerna to an existing repo and Yarn has not been configured to use [yarn workspaces](https://yarnpkg.com/features/workspaces).
+
+To fix this, add the following workspaces declaration to `packages.json`
+
+```json
+{
+  "workspaces": [
+    "packages/*"
+  ]
+}
+  ```
+
+now `npx lerna init` will run correctly.
+
