@@ -1,0 +1,15 @@
+{
+  "name": "typescript-101",
+  "version": "1.0.0",
+  "description": "ToDo turorial getting started with Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
