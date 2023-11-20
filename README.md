@@ -20,4 +20,24 @@ RUN sudo install-packages -y libx11-dev libxkbfile-dev
 RUN sudo install-packages -y libsecret-1-dev
 ```
 
+## Yeoman Generator
+
+The Theia Yeoman generator has a bug when running Yeoman 5+ so install Yeoman 4.0
+
+```sh
+$ npm install yo@4.0.0 -g
+```
+
+Install it with
+```sh
+$ npm install -g yo generator-theia-extension
+```
+
+NOTE the generator has a `--standalone` option that doesn not create the project root
+
+First off, lets generate a hello-world project
+
+```sh
+yo theia-extension
+```
 
