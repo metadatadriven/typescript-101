@@ -36,3 +36,25 @@ $ npm start
 
 ## Node modules
 
+NOTE the example of how to do this starts at [17:00 in the youtube](https://youtu.be/jBmrduvKl5w?si=mlYExiBswTwBnOcy&t=1021) video
+
+Add modules to the project using `npm install`
+```sh
+$ npm i uuid
+```
+
+Now the module can be imported into typescript, for example:
+```typescript
+import  {v4 as uuidV4} from "uuid"
+```
+
+If the module is not a typescript module then you might need to install types for it.
+In VS Code, hover over the import - if there are no types for the module then you might need to install them (if they exist) using for example:
+
+```sh
+$ npm i --save-dev @types/uuid
+```
+
+If there is not types for the module then you will need to create your own (outside scope of this project). But see the [Typescript documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-d-ts.html)
+
+
