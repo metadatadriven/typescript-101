@@ -22,3 +22,7 @@ This creates the `tsconfig.json` with all the typescript [config options](https:
 
 Now install a bundler and create the project (here we are using [snowpack](https://www.snowpack.dev/) - there are plenty [other bundlers](https://byby.dev/web-bundlers) in use)
 
+```sh
+$ npm i create-snowpack-app
+$ npx create-snowpack-app @snowpack/app-template-blank-typescript --force
+```
