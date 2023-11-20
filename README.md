@@ -60,9 +60,19 @@ If there is not types for the module then you will need to create your own (outs
 
 # Monorepo setup
 
-This is done using yarn and lerna - based on [this blog post](https://blog.ah.technology/a-guide-through-the-wild-wild-west-of-setting-up-a-mono-repo-with-typescript-lerna-and-yarn-ed6a1e5467a)
+This is done using yarn and lerna - based on [this blog post](https://www.honeybadger.io/blog/monorepo-yarn-workspace-lerna/)
 
-First install lerna and init it as a devDependencies
+Everything done up to now is deleted and we are about to start again!
+
+Init a Yarn project
+```sh
+yarn init -2
+```
+
+Create a `packages` directory (empty)
+
+
+install lerna and init it as a devDependencies
 ```sh
 $ npx lerna init
 ```
@@ -87,3 +97,17 @@ To fix this, add the following workspaces declaration to `packages.json`
 
 now `npx lerna init` will run correctly.
 
+### Create a new package
+
+Simple `yarn init` a new folder in the `packages` direcotry:
+```sh
+$ mkdir mypackage
+$ cd mypackage
+$ yarn init
+```
+
+Now if we add dependencies to `mypackage` they will be installed in the root (shared) `node_modules` folder, and are not installed in the package.
+
+```sh
+$ yarn add uuid
+```
