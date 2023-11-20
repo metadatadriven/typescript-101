@@ -41,3 +41,22 @@ First off, lets generate a hello-world project
 yo theia-extension
 ```
 
+### Running in the browser
+
+```sh
+yarn build:browser
+yarn start:browser
+```
+
+### Install an additional component using Yeoman generator
+
+The trick here is to use the `--standalone` option, e.g.
+
+```sh
+$ yo theia-extension --standalone
+```
+
+Then you need to add the module as a dependency to the `browser-app/package.json`
+
+REMEMBER to `npm install` to force dependencies to be rebuild
+
