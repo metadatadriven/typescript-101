@@ -20,4 +20,5 @@ $ npx tsc --init
 
 This creates the `tsconfig.json` with all the typescript [config options](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) (mostly commented out)
 
-Configure Typescript to transpile to the `dest` folder - see commit 
+Now install a bundler and create the project (here we are using [snowpack](https://www.snowpack.dev/) - there are plenty [other bundlers](https://byby.dev/web-bundlers) in use)
+
