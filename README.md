@@ -26,3 +26,10 @@ Now install a bundler and create the project (here we are using [snowpack](https
 $ npm i create-snowpack-app
 $ npx create-snowpack-app @snowpack/app-template-blank-typescript --force
 ```
+
+## Start the server
+
+Now we have an empty typescript project that we can run:
+```sh
+$ npm start
+```
