@@ -33,3 +33,6 @@ Now we have an empty typescript project that we can run:
 ```sh
 $ npm start
 ```
+
+## Node modules
+
