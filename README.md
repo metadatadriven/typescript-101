@@ -1,24 +1,23 @@
-# New Project
+# typescript-101
+ToDo turorial getting started with Typescript
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+This project is based on the following tutorials/docs
+- [https://github.com/metadatadriven/typescript-101.git](https://www.youtube.com/watch?v=jBmrduvKl5w)
 
-## Available Scripts
+## Init Project Environment
 
-### npm start
+First off, Create a template `index.html` file based on [boilerplate](https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/)
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+Now, init the environment - first init node then typescript:
+```sh
+$ npm init -y # this creates the default package.json
+$ npm i --save-dev typescript # install typescript in devDependencies
+```
+Now we can init the typescript environment
+```sh
+$ npx tsc --init
+```
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+This creates the `tsconfig.json` with all the typescript [config options](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) (mostly commented out)
 
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
-
-### Q: What about Eject?
-
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+Configure Typescript to transpile to the `dest` folder - see commit 
