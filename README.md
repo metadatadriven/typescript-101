@@ -1,62 +1,55 @@
-# typescript-101 - experimanet/smalcolm/theia-blueprint
+# typescript-101 - Getting started with React
 
-Experiment at creating a [theia blueprint](https://theia-ide.org/docs/blueprint_download) project that runs in [gitpod](https://www.gitpod.io/).
+Based on the [Learn React in 30 minutes](https://youtu.be/hQAHSlTtcmY) youtube tutorial
 
-## First off, create a Gitpod Dockerfile
+This is not using Typescript - just trying to dial-in the key concepts of [React](https://react.dev/)
 
-We need this with all the [Thiea prerequisites](https://github.com/eclipse-theia/theia/blob/master/doc/Developing.md#prerequisites) installed.
+## Prerequisites
 
-For this we are going to create a [custom workspace image](https://www.gitpod.io/docs/configure/workspaces/workspace-image#using-a-custom-dockerfile)
+- Folder with all lower case and no-spaces-in-name
+- node.js installed
 
-1. create `.gitpod.yml` file as per documentation
-2. create the `.gitpod.Dockerfile` and add prerequisites:
+## Create a react app
 
+Use `npx create-react-app .` to create react app in current folder
+
+NOTE that doing this in the root folder complains about the gitpod and vscode folders, so create an
+sub-folder for the app. Once run we get:
 ```
-# You can find the new timestamped tags here: https://hub.docker.com/r/gitpod/workspace-full/tags
-FROM gitpod/workspace-full:2023-11-19-19-13-44
+Success! Created my-react-app at /workspace/typescript-101/my-react-app
+Inside that directory, you can run several commands:
 
-RUN sudo install-packages -y build-essential
-RUN sudo install-packages -y libx11-dev libxkbfile-dev
-RUN sudo install-packages -y libsecret-1-dev
-```
+  npm start
+    Starts the development server.
 
-## Yeoman Generator
+  npm run build
+    Bundles the app into static files for production.
 
-The Theia Yeoman generator has a bug when running Yeoman 5+ so install Yeoman 4.0
+  npm test
+    Starts the test runner.
 
-```sh
-$ npm install yo@4.0.0 -g
-```
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
 
-Install it with
-```sh
-$ npm install -g yo generator-theia-extension
-```
+We suggest that you begin by typing:
 
-NOTE the generator has a `--standalone` option that doesn not create the project root
+  cd /workspace/typescript-101/my-react-app
+  npm start
 
-First off, lets generate a hello-world project
-
-```sh
-yo theia-extension
-```
-
-### Running in the browser
-
-```sh
-yarn build:browser
-yarn start:browser
+Happy hacking!
 ```
 
-### Install an additional component using Yeoman generator
-
-The trick here is to use the `--standalone` option, e.g.
-
-```sh
-$ yo theia-extension --standalone
+This creates the following React app folder structure
+```
+my-react-app
+├── node_modules # Lots of node modules installed here
+├── public       # contains basic index.html with one root div
+└── src          # all source code - see index.js
 ```
 
-Then you need to add the module as a dependency to the `browser-app/package.json`
+Along with `package.json`
 
-REMEMBER to `npm install` to force dependencies to be rebuild
+## Starting a React App
 
+Use `npm start` to start the app
