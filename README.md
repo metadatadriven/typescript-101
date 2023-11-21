@@ -44,8 +44,9 @@ yo theia-extension
 ### Running in the browser
 
 ```sh
-yarn build:browser
-yarn start:browser
+$ yarn
+$ yarn build:browser
+$ yarn start:browser
 ```
 
 ### Install an additional component using Yeoman generator
