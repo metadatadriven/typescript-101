@@ -1,4 +1,10 @@
-# typescript-101
+# About this repo
+
+This repo contains many experiments in technologies needed to develop Theia aplications, suchj as Typescript, React, etc.
+
+See the `experiment/smalcolm` branches
+
+# typescript-101 tutorial
 ToDo turorial getting started with Typescript
 
 This project is based on the following tutorials/docs
