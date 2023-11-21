@@ -53,3 +53,18 @@ Along with `package.json`
 ## Starting a React App
 
 Use `npm start` to start the app
+
+## React VS Code extension
+
+Install [es7-react-js-snippets](https://open-vsx.org/extension/dsznajder/es7-react-js-snippets) VS Code extension then
+use the `rfc` shortcut in an empty file to expand boilerplate for a React Functional Component
+
+## Add state to a react component
+
+```js
+import { useState } from 'react';
+```
+
+This will import the state hook
+
+## 
