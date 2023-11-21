@@ -67,4 +67,12 @@ import { useState } from 'react';
 
 This will import the state hook
 
-## 
+## useEffect to implement side effects
+
+Such as using localStorage or modifying UI
+
+## useRef to cross-reference parts of the UI
+
+For example, set a reference to an input field `{todoNameRef}` which can be accessed by an button `onClick` handler
+
+
