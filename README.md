@@ -22,7 +22,7 @@ RUN sudo install-packages -y libsecret-1-dev
 
 ## Yeoman Generator
 
-The Theia Yeoman generator has a bug when running Yeoman 5+ so install Yeoman 4.0
+The Theia Yeoman generator h[as a bug when running Yeoman 5+](https://github.com/eclipse-theia/generator-theia-extension/issues/182) so to workaround install Yeoman 4.0:
 
 ```sh
 $ npm install yo@4.0.0 -g
