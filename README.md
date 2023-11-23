@@ -63,4 +63,7 @@ $ npm i --save-dev @types/uuid
 
 If there is not types for the module then you will need to create your own (outside scope of this project). But see the [Typescript documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-d-ts.html)
 
+## Typescript code documentation
+
+[TSDoc](https://tsdoc.org/) is a proposal to standardize the doc comments used in TypeScript code, so that different tools can extract content without getting confused by each other's markup. It builds on [JSDoc](https://jsdoc.app/) for Javascript.
 
